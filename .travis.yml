@@ -6,7 +6,7 @@ env:
     - CODE_TAG=master
 
 arch:
-  - arm64
+  - amd64
 
 services:
   - docker
