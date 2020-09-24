@@ -14,5 +14,6 @@ RUN apt download libnvidia-container-tools
 RUN apt download nvidia-container-toolkit
 RUN apt download nvidia-container-runtime
 RUN apt download nvidia-docker2
+RUN apt download libnvidia-container
 
 CMD ["echo","aa"]
