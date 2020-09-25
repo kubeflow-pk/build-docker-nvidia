@@ -10,10 +10,10 @@ RUN sed -i 's/$(ARCH)/amd64/g' /etc/apt/sources.list.d/nvidia-docker.list
 RUN cat /etc/apt/sources.list.d/nvidia-docker.list
 RUN apt-get update
 #RUN apt download libnvidia-container
-RUN apt download libnvidia-container-tools
-RUN apt download nvidia-container-toolkit
-RUN apt download nvidia-container-runtime
-RUN apt download nvidia-docker2
-RUN apt download libnvidia-container
+#RUN apt download libnvidia-container-tools
+#RUN apt download nvidia-container-toolkit
+#RUN apt download nvidia-container-runtime
+#RUN apt download nvidia-docker2
+RUN apt-get install --reinstall -d `apt-cache depends nvidia-docker2 | grep depends | cut -d: f2 |tr -d "<>"`
 
 CMD ["echo","aa"]
